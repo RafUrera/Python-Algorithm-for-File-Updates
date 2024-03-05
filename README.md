@@ -1,10 +1,10 @@
 # Python Algorithm for File Updates
 
-## Project description
+## Project Description
 A company uses the IP addresses of employees to control who is able to access confidential internal data. This is controlled by the use of  an allow list, which lists the IP addresses of employees with access to the file. This file must be regularly updated and maintained. 
 A separate remove list identifies IP addresses to be removed from the list for various reasons. This can be done by creating an algorithm in Python that checks the allow list file and the remove list to ensure that the IP addresses in the list are up to date and that employee access is correct.
 
-## Open the file that contains the allow list
+## Open the File that Contains the Allow List
 
 To begin, open the file: `allow_list.txt` as that contains the IP addresses that are allowed access. This is done by assigning the file name as a string as a variable called `import_file`. Then using a `with` statement to open the file itself into python. 
 
@@ -13,26 +13,26 @@ To begin, open the file: `allow_list.txt` as that contains the IP addresses that
 
 The `.open()` function’s second parameter contains the `“r”` string which indicates that the file is being opened with the purpose of being read. 
 
-## Read the file contents
+## Read the File Contents
 To be able to actually read and interact with the contents of the file it needs to be converted into a string.  This is done by using the .read() method and assigning the file that was imported earlier to a variable. 
 
 ![3](https://github.com/RafUrera/Python-Algorithm-for-File-Updates/assets/161657613/c8e62642-79b2-4791-afa5-881538e78c76)
 
 After applying the `.read()` method to the file and stating it as a variable, it becomes a string that can be read as a string format in the code. 
 
-## Convert the string into a list
+## Convert the String Into a List
 Now that the file is a string, it will state all the IP addresses on the `allow_list.txt`. However, in order to remove individual IP addresses from the list. The string must be converted to a list format so that each IP address is its own object. To do this, the ip_addresses that variable was defined in the previous step will go through the `.split()` method. This will convert each entry on the list that is separated by a space into its own element.
 
 ![4](https://github.com/RafUrera/Python-Algorithm-for-File-Updates/assets/161657613/88b01785-627c-49d7-93ad-4336063e56f6)
 
-## Iterate through the remove list
+## Iterate Through the Remove List
 Now that the IP addresses are individual elements in a list. Check them against the IP addresses in the `remove_list`. To do this, create a `for` loop that will cycle through each `element` in the newly created list. For clarification, an `element` here is an IP address on the list.
 
 ![5](https://github.com/RafUrera/Python-Algorithm-for-File-Updates/assets/161657613/2010a6b6-5254-4fb3-a592-4300c8f2123b)
 
 Then following that statement add the conditional that will check if an `element` matches an IP on the remove list, and this line of code will proceed to the next section if this condition is true.
 
-## Remove IP addresses that are on the remove list
+## Remove IP Addresses That are on the Remove List
 This part continues from the statement created in the previous section. 
 For the purpose of this demonstration, the list will be defined with example IP addresses:
 
